@@ -16,7 +16,7 @@
             <p>Description: {{ product.description|linebreaks }}</p>
             {% if product.discount %}
                 <div class="card-discount d-flex gap-2">
-                    <p class="line">$ {{ product.price }}</p>
+                    <p class="line">{{ product.price }} ₽</p>
                     <p>$ {{ product.sell_price }}</p>
                 </div>
             {% else %}

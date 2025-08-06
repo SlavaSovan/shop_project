@@ -155,12 +155,12 @@ h5 {
     font-size: 56px;
 }
 
-.cart-discount {
+.card-discount {
     margin-top: -10px;
     font-weight: 600;
 }
 
-.cart-discount .price {
+.card-discount .price {
     margin-top: -1px;
 }
 
@@ -182,4 +182,63 @@ h5 {
 
 .cart-btn:hover {
     border: 1px solid #000;
+}
+
+.main {
+    flex: 1;
+    margin-left: 150px;
+    width: 100%;
+}
+
+.product-list {
+    width: 100%;
+}
+
+.main-title {
+    font-size: 36px;
+    margin-bottom: 10px;
+    margin-top: 65px;
+}
+
+.items {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    width: 100%;
+    max-width: 1300px;
+    justify-content: center;
+    justify-items: center;
+    margin: 0 auto;
+}
+
+.sidebar {
+    width: 200px;
+    flex-shrink: 0;
+    margin-top: 70px;
+}
+
+.llist {
+    display: flex;
+    width: 100%;
+}
+
+.sidebar ul li {
+    font-size: 20px;
+    width: 165px;
+    height: 35px;
+    margin-bottom: 5px;
+}
+
+.sidebar ul li a {
+    margin-left: 15px;
+    width: 165px;
+}
+
+.sidebar ul {
+    margin-top: 20px;
+}
+
+.selected {
+    border: 1px solid #000;
+    border-radius: 5px;
 }
