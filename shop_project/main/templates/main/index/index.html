@@ -4,14 +4,39 @@
 {% block title %}Home{% endblock title %}
 
 {% block content %}
-    <img src="{% static 'img/CR_CAP.png' %}" class="cr-cap" alt="">
+    <div id="mainCarousel" class="carousel carousel-dark slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+          </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="1200">
+                <img src="{% static 'img/slider/1.png' %}" class="d-block w-100" alt="">
+            </div>
+            <div class="carousel-item" data-bs-interval="1200">
+                <img src="{% static 'img/slider/2.png' %}" class="d-block w-100" alt="">
+            </div>
+            <div class="carousel-item" data-bs-interval="1200">
+                <img src="{% static 'img/slider/3.png' %}" class="d-block w-100" alt="">
+            </div>
+            <div class="carousel-item" data-bs-interval="1200">
+                <img src="{% static 'img/slider/4.png' %}" class="d-block w-100" alt="">
+            </div>
+            <div class="carousel-item" data-bs-interval="1200">
+                <img src="{% static 'img/slider/5.png' %}" class="d-block w-100" alt="">
+            </div>
+        </div>
+    </div>
     <section class="home d-flex flex-column">
         <div class="home-title d-flex flex-column align-items-center">
-            <a href="#" class="home-btn mt-4">ALL PRODUCTS</a>
+            <a href="#" class="home-btn mt-4">Все товары</a>
         </div>
         <div class="home-recomendation">
             <div class="rec-title mb-4">
-                <h3><span>Popular Accesoires</span></h3>
+                <h3><span>Популярные товары</span></h3>
             </div>
         </div>
         <div class="home-cards d-flex gap-4">
