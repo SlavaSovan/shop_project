@@ -48,6 +48,7 @@ h5 {
     justify-content: space-between;
     padding: 0 15px;
     align-items: center;
+    height: 80px;
 }
 
 .container {
@@ -68,9 +69,10 @@ h5 {
 
 .logo-carnival-nav {
     position: fixed;
-    top: 0.5%;
+    margin: 5px 0;
+    top: 0%;
     left: 48%;
-    height: 60px;
+    height: 70px;
 }
 
 .home {

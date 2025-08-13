@@ -17,7 +17,7 @@
             <navbar class="header-nav pt-4">
                 <ul class="header-list d-flex">
                     <li>
-                        <a href="/" class="nav-a m-3">Home</a>
+                        <a href="{% url "main:popular_list" %}" class="nav-a m-3">Home</a>
                     </li>
                     <li>
                         <a href="{% url "main:product_list" %}" class="nav-a m-3">Shop</a>
@@ -25,7 +25,7 @@
                 </ul>
             </navbar>
             <div class="header-logo">
-                <a href="/"><img src="{% static 'img/carnival_logo.png' %}" class="logo-carnival-nav" alt=""></a>
+                <a href="{% url "main:popular_list" %}"><img src="{% static 'img/carnival_logo.png' %}" class="logo-carnival-nav" alt=""></a>
             </div>
             <div class="header-profile pt-2">
                 <a href="{% url "cart:cart_detail" %}">
