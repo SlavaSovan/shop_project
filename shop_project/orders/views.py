@@ -8,7 +8,7 @@ def order_create(request):
     cart = Cart(request)
     if request.method == "POST":
         form = OrderCreateForm(request.POST, request=request)
-        if form.is_vaid():
+        if form.is_valid():
             order = form.save()
             for item in cart:
                 OrderItem.objects.create(

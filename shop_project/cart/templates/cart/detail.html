@@ -48,7 +48,7 @@
             <a href="/shop" class="cart-btn">Вернуться к покупкам</a>
             {% with cart_quantity=cart|length %}
                 {% if cart_quantity > 0 %}
-                    <a href="#" class="cart-btn">Оформление заказа</a>
+                    <a href="{% url "orders:order_create" %}" class="cart-btn">Оформление заказа</a>
                 {% endif %}
             {% endwith %}
         </div>

@@ -7,7 +7,7 @@
     <section class="login d-flex">
         <div class="login-title">
             <h2>Login</h2>
-            <form action="{% url "user:login" %}" method="post">
+            <form action="{% url "users:login" %}" method="post">
                 {% csrf_token %}
                 {% if request.GET.next %}
                     <input type="hidden" name="next" value="{{ request.GET.next }}">
