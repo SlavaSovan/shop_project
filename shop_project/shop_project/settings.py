@@ -145,3 +145,6 @@ STRIPE_API_VERSION = "2022-08-01"
 STRIPE_WEBHOOK_SECRET = (
     "whsec_a74c4dabe56c61de4541c0998c6b2b30361f78f55d69475da5eff29b21316c4b"
 )
+
+# stripe login
+# stripe listen --forward-to localhost:8000/payment/webhook/

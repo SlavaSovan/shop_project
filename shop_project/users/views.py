@@ -34,7 +34,7 @@ def registration(request):
             user = form.instance
             auth.login(request, user)
             messages.success(request, f"{user.username}, Регистрация прошла успешно!")
-            return HttpResponseRedirect(reverse("user:login"))
+            return HttpResponseRedirect(reverse("users:login"))
     else:
         form = UserRegistrationForm()
     return render(request, "users/registration.html")
@@ -44,14 +44,14 @@ def registration(request):
 def profile(request):
     if request.method == "POST":
         form = ProfileForm(
-            data=request.POST, isinstance=request.user, files=request.FILES
+            data=request.POST, instance=request.user, files=request.FILES
         )
         if form.is_valid():
             form.save()
             messages.success(request, "Данные в профиле успешно обновлены")
-            return HttpResponseRedirect(reverse("user:profile"))
+            return HttpResponseRedirect(reverse("users:profile"))
     else:
-        form = ProfileForm(isinstance=request.user)
+        form = ProfileForm(instance=request.user)
 
     orders = (
         Order.objects.filter(user=request.user)
