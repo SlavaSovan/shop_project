@@ -24,7 +24,7 @@
                                 <p>Количество: {{ item.quantity }}</p>
                             </div>
                         </div>
-                        <form action="{% url "cart:cart-remove" product.id %}" method="post">
+                        <form action="{% url "cart:cart_remove" product.id %}" method="post">
                             <input type="submit" value="Удаление" class="remove-btn">
                             {% csrf_token %}
                         </form>

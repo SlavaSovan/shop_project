@@ -31,7 +31,7 @@ def registration(request):
         form = UserRegistrationForm(data=request.POST)
         if form.is_valid():
             form.save()
-            user = form.unstance
+            user = form.instance
             auth.login(request, user)
             messages.success(request, f"{user.username}, Регистрация прошла успешно!")
             return HttpResponseRedirect(reverse("user:login"))
