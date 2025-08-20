@@ -5,9 +5,9 @@
 
 {% block content %}
     <div class="d-flex">
-        <div class="profile bg-white p-4 mb-4 mx-2 rounded">
-            <h2 class="mb-2">Профиль</h2>
+        <div class="windowp d-flex bg-white p-4 mb-4 mx-2 rounded">
             <form action="{% url "users:profile" %}" method="post" enctype="multipart/form-data">
+                <h2 class="mb-2">Профиль</h2>
                 {% csrf_token %}
                 <div class="d-flex">
                     <div class="box1">
