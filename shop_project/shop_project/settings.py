@@ -10,7 +10,11 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.2/ref/settings/
 """
 
+import os
 from pathlib import Path
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -138,8 +142,8 @@ CART_SESSION_ID = "cart"
 
 AUTH_USER_MODEL = "users.User"
 
-STRIPE_PUBLISHABLE_KEY = "pk_test_51RxQxRQJQugJfxwyN3m0kIIzg3ND2YirbCFzojuiRls7IsLrKOn5pquYjixxux7uaSUUkKvfE5eBqp9lK8wK59fs00xYL5Yr0x"
-STRIPE_SECRET_KEY = "sk_test_51RxQxRQJQugJfxwy9cZieyCnxCNG44uTr13tMb6j7LV7uBpQXmkGK4LJgNUvWCAoacdzTQAfoDh0PggOS2GaUs5F00iuv0Qd95"
+STRIPE_SECRET_KEY = os.getenv("STRIPE_SECRET_KEY", "")
+STRIPE_PUBLISHABLE_KEY = os.getenv("STRIPE_PUBLISHABLE_KEY", "")
 STRIPE_API_VERSION = "2022-08-01"
 
 STRIPE_WEBHOOK_SECRET = (
